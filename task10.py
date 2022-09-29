@@ -4,6 +4,7 @@
 
 ist = [int(i) for i in input("Введите числа через пробел: ").split()]
 
-for i in range(0, len(ist) - 1):
-    if ist[i] < ist[i+1]:
-        print(ist[i+1])
+for i in range(0, len(ist) - 1):#просмотр элементов списка от 0 до -1 последний не нужен
+    if ist[i] < ist[i+1]:#если выполняется условие
+        print(ist[i+1])#то печатаем больший элемент
+ 
