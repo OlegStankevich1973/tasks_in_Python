@@ -4,7 +4,7 @@
 # слова разделены одним или большим числом пробелов или символами конца строки.
 # Входные данные	      Выходные данные
 # one two one tho three	    0 0 1 0 0
-string = 'one two one tho three one one tho tho one'
+string = 'one two two three one two three two'
 list = []
 list = string.split(' ')
 print (list)
