@@ -12,7 +12,7 @@ dict = {}
 for i in list:
     if i in dict:
         dict[i] += 1
-        print(dict[i], end=' ')
+        #print(dict, end=' ')
     else:
-        dict[i] = 0
-        print(dict[i], end=' ')
+        dict[i] = 1
+print(dict)
