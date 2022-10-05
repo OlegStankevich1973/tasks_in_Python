@@ -12,7 +12,6 @@ vocab = {}
 text = open ('4-5.txt','r') 
 for line in text: 
         a = line.split()
-        print(a)
         if len(a) == 2: 
             vocab[a[0]] = a[1] 
         if len(a) == 1: 
