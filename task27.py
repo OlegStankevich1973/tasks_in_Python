@@ -16,3 +16,19 @@ for i in list:
     else:
         dict[i] = 1
 print(dict)
+# вариант 2
+string = 'one two one tho three one one tho tho one'
+list = []
+list = string.split(' ')
+print(list)
+dict = {}
+for i in list:
+    if i in dict:
+        dict[i] += 1
+        print(dict[i], end=' ')
+    else:
+        dict[i] = 0
+        print(dict[i], end=' ')
+for k, v in dict.items():
+    print(k, '-', v)
+# print(dict)
