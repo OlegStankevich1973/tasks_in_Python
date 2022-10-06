@@ -11,24 +11,20 @@
 #     i += 1
 # print(lst_result)
 
-# from random import uniform
-
-from random import uniform
+from random import uniform #вызываем библиотеку создания дробных чисел
 n = int(input('Введите размер списка '))
-list1 = []
+get_real_nums = [] #создаем список
 for i in range(n):
-    f = uniform(0, 9)  # uniform создает случайные дробные числа от 0 до 9
-    list1.append(round(f, 2)) #заполняет список list1 случайными числами из f с количеством 2 знака после запятой
-  
-# min = list1[0]
-# max = 0
-# for i in range(len(list1)):# проходим весь список list1 по его длине
-    
-# dif = (max - int(max)) - (min - int(min))
-dif = (max(list1[i]) - int(max(list1[i]))) - (min(list1[i]) - int(min(list1[i])))
-list_dif = []
-print(list_dif)
-# for i in range(n)
-print(list1)
-print(max(list1), min(list1))
-print(round(dif,2))
+    f = uniform(0, 100)
+    get_real_nums.append(round(f, 2)) #заполняем список дробными значениями (два знака после запятой)
+
+def find_diff(get_real_nums):# метод поиска разности между макс и мин дробными значениями
+    nums = [round(x - int(x), 2) for x in (get_real_nums)]
+    print('max дробное значение = ' , max(nums))
+    print ('min дробное значение = ', min(nums))
+    return max(nums) - min(nums)
+   
+print(get_real_nums)
+print(find_diff(get_real_nums))
+
+
