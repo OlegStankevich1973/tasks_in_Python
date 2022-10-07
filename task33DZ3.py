@@ -10,4 +10,8 @@ for i in range(2, n):#перебираем список начиная со 2 э
     f1, f2 = f2, f1 + f2
     list1.append(f2)# собираем список
 print(list1)
- 
+f1 = f2 = 1
+for i in range(-n, 1):
+    f1, f2 = f2, f1 - f2
+    list1.insert(0, f2)
+print(list1)
