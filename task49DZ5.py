@@ -6,7 +6,7 @@
 def coding(txt):
     count = 1
     res = ''
-    # цикл считает одинаковые знаки в строке
+ # цикл считает одинаковые знаки в строке
     for i in range(len(txt)-1):
         if txt[i] == txt[i+1]:
             count += 1
