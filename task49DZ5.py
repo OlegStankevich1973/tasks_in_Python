@@ -28,6 +28,7 @@ def decoding(txt):
         if not txt[i].isalpha():
             number += txt[i]
         else:
+# склеивает результат 
             res = res + txt[i] * int(number)
             number = ''
     return res
