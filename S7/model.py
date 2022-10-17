@@ -6,6 +6,7 @@ def calc(text,log):
         return eval(text)
     
     except SyntaxError:
+        
             log.error(f'Синтаксическая ошибка')
             return'Неверная формула'
             
