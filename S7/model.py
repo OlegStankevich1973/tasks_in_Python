@@ -6,7 +6,7 @@ def calc(text,log):
         return eval(text)
     
     except SyntaxError:
-        
+
             log.error(f'Синтаксическая ошибка')
             return'Неверная формула'
             
@@ -15,5 +15,6 @@ def convert(kg,log):
         return int(kg) * 1000
         # функция Exception ловит все ошибки
     except Exception:
+        
             log.error(f'При конвертации {kg} в граммы возникла ошибка приведения к Int')
             return'Ошибка ввода'
