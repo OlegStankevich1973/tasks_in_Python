@@ -5,7 +5,6 @@ info = gi
 
 
 def csv_data_record(info): # запись файла csv
-
     with open("phonebook/csv_data.csv", 'a', encoding='utf-8', newline='') as r_file:  # открываем файл
         file_csv = csv.writer(r_file, delimiter=";",lineterminator="\n")  # создаем писателя
         file_csv.writerow([info[0], info[1], info[2], info[3]])#с помощью писателя записываем данные в файл
