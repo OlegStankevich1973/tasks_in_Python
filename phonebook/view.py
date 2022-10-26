@@ -20,9 +20,9 @@ def show_import():
 def get_info():#метод ввода данных
     info = []
     last_name = input('Введите фамилию: ')
-    info.append(last_name)
+    info.append(last_name.title())
     first_name = input('Введите имя: ')
-    info.append(first_name)
+    info.append(first_name.title())
     phone_number = ''
     valid = False
     while not valid:
@@ -35,7 +35,7 @@ def get_info():#метод ввода данных
                 valid = True
         except:
             print('Номер телефона должен состоять только из цифр.')
-    info.append(phone_number)
+    info.append(phone_number.title())
     description = input('Введите описание: ')
-    info.append(description)
+    info.append(description.title())
     return info
