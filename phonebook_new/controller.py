@@ -13,23 +13,17 @@ def run():#вывод  меню
             model.csv_data_record(data)
             run()
 
+     
 
-    # elif menu == 2:#вывод меню для дальнейших действий с 
-    #         res = view.show_import()#вывод меню для чтения телефонной книги
-    #         if res == 1:
-    #              model.txt_data_reading()#вертикальный вывод информации в терминал
-    #         elif res == 2:
-    #            model.csv_data_reading()#горизонтальный вывод информации в терминал
-    #         run()
     elif menu == 2:  # вывод меню для дальнейших действий с
             res = view.show_import()  # вывод меню для чтения телефонной книги
             if res == 1:
                model.txt_data_reading()  # вертикальный вывод информации в терминал
             elif res == 2:
-               model.csv_data_reading()  # горизонтальный вывод информации в терминал
+              model.csv_data_reading()  # горизонтальный вывод информации в терминал
             run()
 
-            
+ 
     
     
     elif menu == 3:#поиск абонента
@@ -39,5 +33,20 @@ def run():#вывод  меню
         run()
 
     # elif menu == 4:#удаление абонента
+    #     index = view.delete()
+    #     point = view.change_menu()
+    #     if point == 1:
+    #         model.del_info(index)
+    #     elif point == 2:
+    #         model.del_info_new(index)
 
-    # elif menu == 5:#корректировка данных абонента
+    elif menu == 4:  # удаление абонента
+        index = view.delete()
+        model.del_info(index)
+        run()
+    
+    elif menu == 5:#корректировка телефона
+        index, tel = view.change_tel()
+        model.update_info_new(index, tel)
+
+        

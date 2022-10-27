@@ -43,21 +43,40 @@ def csv_data_reading():  # чтение данных файла csv
 
 
 def reading_file(param):#чтение файла
-    b = view.data_output()
-    if b == 1:
-        with open('phonebook_new/csv_data.csv', 'r',encoding='utf-8') as file:
-            for line in file:
-                if param in line:
-                    print (line)
-    if b == 2:
-        # list_csv = csv_data_open()
-        with open('phonebook_new/csv_data.csv', 'r', encoding='utf-8') as file:
-            reader = csv.reader(file, delimiter=';')
-            # print (list(reader))
-            for line in reader:
-                print(line)
-                # if param in line:
-                #     list = line.split(';')
-                #     print(list)
-                    # print(f'{list[0]}\n,{list[1]}\n,{list[2]}\n,{list[3]}\n')
+    with open('phonebook_new/csv_data.csv', 'r',encoding='utf-8') as file:
+        for line in file:
+            if param in line:
+                print (line)
+                
+ 
+
+def del_info(index):  # удаление информации
+    list_csv = csv_data_open()
+    # print(list_csv)
+    del list_csv[index-1]
+    with open("phonebook_new/csv_data.csv", "w", encoding="utf8", newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        for row in list_csv:
+            writer.writerow(row)
+
+
+
+# def export_csv_csv():     # экспорт из csv в csv
+#     with open('phonebook_new/csv_data.csv', encoding="utf8") as csvfile, open('phonebook_new/csv-csv_data_out.csv', 'w', encoding="utf8", newline='') as f:
+#         reader = csv.reader(csvfile, delimiter=';')
+#         writer = csv.writer(f, delimiter=';')
+#         for row in reader:
+#             writer.writerow(row)
+
+
+def update_info_new(index, tel):  # 4 - изменить телефон с перезаписью в новый файл
+    # export_csv_csv()
+    list_csv = csv_data_open()
+    list_csv[index-1][2] = tel
+    with open("phonebook_new/csv_data.csv", "w", encoding="utf8", newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        for row in list_csv:
+            writer.writerow(row)
+
+
 
