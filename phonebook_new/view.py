@@ -40,6 +40,7 @@ def get_info():  # метод ввода данных абонента
     description = input('Введите описание: ')
     info.append(description)
     return info
+    
 
 def find():#метод поиска абонента
     print('По какому параметру ищем контакт: \n'
