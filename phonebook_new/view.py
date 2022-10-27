@@ -58,28 +58,6 @@ def find():#метод поиска абонента
     return contact
 
 
-def change_tel():  # 4 - изменить телефон
-    out_yellow('Введите индекс для изменения и новый телефон, через энтер')
-    return int(input()), input()
-
-
-def out_red(text):
-    print("\033[31m {}\033[0m" .format(text))
-
-
-# def delete():   # 3 - удаление информации
-#     out_yellow('Введите индекс для удаления')
-#     return int(input())
-
-
-def change_menu():     # что делать с изменениями? сохранить в текущем или создать новый
-    out_yellow('Выберите необходимое действие!')
-    out_red('Вы хотите: ')
-    print('1 - сохранить изменеия в текущем файле')
-    print('2 - экспортирвать в новый csv файл')
-    return int(input('введите цифру: '))
-
-
 def delete():
     print('Введите индекс для удаления')
     return int(input())

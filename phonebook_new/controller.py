@@ -22,31 +22,22 @@ def run():#вывод  меню
             elif res == 2:
               model.csv_data_reading()  # горизонтальный вывод информации в терминал
             run()
-
- 
     
     
     elif menu == 3:#поиск абонента
-        print(' Ищем абонента ')
-        contact = view.find()#ввод данных для поиска абонента
-        model.reading_file(contact)#поиск абонента через метод поиска
-        run()
-
-    # elif menu == 4:#удаление абонента
-    #     index = view.delete()
-    #     point = view.change_menu()
-    #     if point == 1:
-    #         model.del_info(index)
-    #     elif point == 2:
-    #         model.del_info_new(index)
+            print(' Ищем абонента ')
+            contact = view.find()#ввод данных для поиска абонента
+            model.reading_file(contact)#поиск абонента через метод поиска
+            run()
+   
 
     elif menu == 4:  # удаление абонента
-        index = view.delete()
-        model.del_info(index)
-        run()
+            index = view.delete()
+            model.del_info(index)
+            run()
     
     elif menu == 5:#корректировка телефона
-        index, tel = view.change_tel()
-        model.update_info_new(index, tel)
-
+            index, tel = view.change_tel()
+            model.update_info_new(index, tel)
+            run()
         
